@@ -13,7 +13,7 @@ describe("Домашнее задание к занятию 3 «Массивы»
     })
 
     it("[0,1,2] === [0, 1] false", () => {
-      expect(compareArrays([0,1,2] === [0, 1])).toEqual(false)
+      expect(compareArrays([0,1,2], [0, 1])).toEqual(false)
     })
     it("[8, 9, 5, 4], [8, 9, 5, 4, 8, 3, 5] false", () => {
       expect(compareArrays([8, 9, 5, 4], [8, 9, 5, 4, 8, 3, 5])).toEqual(false)
@@ -23,13 +23,13 @@ describe("Домашнее задание к занятию 3 «Массивы»
     it("[-1,6,-9,3] => [60,30]", () => {
       expect(advancedFilter([-1, 6, -9, 3])).toEqual([60, 30])
     })
-    it("[-10,-21,12,123] => [120, 1230]  true", () => {
+    it("[-10,-21,12,123] => [120, 1230]", () => {
       expect(advancedFilter([-10, -21, 12, 123])).toEqual([120, 1230])
     })
-    it("[-1,-2] => []  true", () => {
+    it("[-1,-2] => []", () => {
       expect(advancedFilter([-1, -2])).toEqual([])
     })
-    it("[4,3,5] => [30]  true", () => {
+    it("[4,3,5] => [30]", () => {
       expect(advancedFilter([4, 3, 5])).toEqual([30])
     })
   })
