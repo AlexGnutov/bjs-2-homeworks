@@ -14,7 +14,7 @@ function cachingDecoratorNew(func) {
         queue.shift();
       }
       let result = func.call(this, ...args);
-      queue.push({'hash': hash, 'value': result}); 
+      queue.push({hash, 'value': result}); 
       return ("Вычисляем: " + result);
     }
   }

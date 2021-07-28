@@ -34,20 +34,14 @@ class Triangle {
     }
 }
 
-function getArea() {
-    return "Ошибка! Треугольник не существует";
-}
-function getPerimeter() {
-    return "Ошибка! Треугольник не существует";
-}
-
-const wrongTriangle = {getArea, getPerimeter}
-
 function getTriangle(a, b, c) {
     try {
         return new Triangle(a, b, c);
     } catch {
-        return wrongTriangle;
+        return {
+            getArea: () => "Ошибка! Треугольник не существует",
+            getPerimeter: () => "Ошибка! Треугольник не существует"
+        };
     }
 }
 
